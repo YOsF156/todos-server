@@ -10,10 +10,7 @@ exports.connect = async () => {
       },
       (err) => {
         if (err) return console.log("ERROR :", err);
-        console.log(
-          "🚀 ~ file: db.js ~ line 12 ~ exports.connect= ~ MONGO_URL",
-          process.env.MONGO_URL
-        );
+
         console.log(
           "MongoDB Connection -- Ready state is:",
           mongoose.connection.readyState

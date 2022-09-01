@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 
 // app.use(cors({ cradentials: true, allowedHeaders: ["X-Requested-With"] }));
 app.use(cookieParser())
-app.use(cors({ credentials: true, origin: process.env.BASE_URL }))
+app.use(cors({ credentials: true, origin: [process.env.BASE_URL, "http://localhost:3000/"] }))
 app.use(express.json());
 require("./DL/db").connect();
 
